@@ -1,21 +1,16 @@
 users:
-  - name: springbootweb
-    password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
+  - name: openproject
+    password: $POSTGRESQL_OPENPROJECT_PASSWORD
     role: superuser
 databases:
-  - name: springbootweb
-    owner: springbootweb
+  - name: openproject
+    owner: openproject
     tablespace:
-       - name: tb1
-         location: /appz/data/tb1
+      - name: tb1
+        location: /appz/data/tb1
     schemas:
       - name: schema1
-        authorised_user: springbootweb
+        authorised_user: openproject
         search_path: true
-restore:
-- database: springbootweb
-  source:
-    url: 'https://www.ecloudcontrol.com/wp-content/uploads/2021/06/accountsdb-springboot.sql_.zip'
-  user: springbootweb
-  password: $POSTGRESQL_SPRINGBOOTWEB_PASSWORD
-  token: 20210623-1329
+
+ 
