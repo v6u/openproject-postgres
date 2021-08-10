@@ -1,6 +1,6 @@
 app:
-    name: Postgres Master
-    code: POSTGRES
+    name: OpenProject Postgres Master
+    code: OpenProjectPOSTGRES
     notify: appz@ecloudcontrol.com
     
 build:
