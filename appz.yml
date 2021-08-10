@@ -39,6 +39,8 @@ properties:
           vault: POSTGRESQL_SPRINGBOOTWEB_PASSWORD
     PGPASSWORD: 
       vault: PGPASSWORD
+    POSTGRESQL_OPENPROJECT_PASSWORD:
+      vault: POSTGRESQL_OPENPROJECT_PASSWORD
     revision : 78
 
     #WebDav Setup
