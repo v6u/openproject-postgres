@@ -1,7 +1,7 @@
 app:
     name: Postgres Master
     code: POSTGRES
-    notify: bkoshy@ecloudcontrol.com
+    notify: appz@ecloudcontrol.com
     
 build:
     version: 13.X
@@ -11,7 +11,7 @@ build:
     image_template: postgres_master-13.3
     
 deploy:
-    context: bibin-ecloudcontrol/DEV
+    context: alpha/DEV
     type: statefulset
     replicas: 1
     port:
@@ -35,8 +35,6 @@ properties:
     POSTGRESQL_SYNCHRONOUS_COMMIT_MODE: on
     POSTGRESQL_NUM_SYNCHRONOUS_REPLICAS: 1
     POSTGRESQL_REP_USER: replica
-    POSTGRESQL_SPRINGBOOTWEB_PASSWORD:
-          vault: POSTGRESQL_SPRINGBOOTWEB_PASSWORD
     PGPASSWORD: 
       vault: PGPASSWORD
     POSTGRESQL_OPENPROJECT_PASSWORD:
